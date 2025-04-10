@@ -14,10 +14,6 @@ class QuestionsScreen  extends StatefulWidget{
 
   
 
-
-
-
-
 }
 
 
