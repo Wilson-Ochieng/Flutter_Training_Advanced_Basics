@@ -18,19 +18,19 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         child: Column(
          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Questions'),
+            const Text('Questions',style: TextStyle(color: Color.fromARGB(255, 243, 243, 243)),),
              const SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Answer 1')),
+            ElevatedButton(onPressed: () {}, child:  const  Text('Answer 1')),
             const   SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Answer 2')),
+            ElevatedButton(onPressed: () {}, child: const  Text('Answer 2')),
             const  SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Answer 3')),
+            ElevatedButton(onPressed: () {}, child: const  Text('Answer 3')),
           ],
         ),
       );
