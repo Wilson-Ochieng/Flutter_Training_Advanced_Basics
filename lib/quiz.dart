@@ -7,6 +7,9 @@ import 'package:adv_basics/results_screen.dart';
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
 
+
+
+
   @override
   State<Quiz> createState() {
     return _QuizeState();
@@ -46,7 +49,7 @@ class _QuizeState extends State<Quiz> {
     }
 
     if(activeScreen == 'results-screen'){
-      screenWidget = ResultsScreen();
+      screenWidget = ResultsScreen( ChoosenAnswers: selectedAnswers,);
 
 
 
