@@ -15,12 +15,12 @@ class ResultsScreen extends StatelessWidget {
       summary.add({
         'question_index':i,
         'question':questions[i].text,
-        'correct_answer':questions[i].answers.[0],
+        'correct_answer':questions[i].answers[0],
         'user_answer':ChoosenAnswers[i]
 
 
 
-      })
+      });
 
 
     }
