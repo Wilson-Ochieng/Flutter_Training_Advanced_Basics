@@ -1,30 +1,24 @@
+import 'package:adv_basics/questions_summary.dart';
 import 'package:flutter/material.dart';
-import  'package:adv_basics/data/questions.dart';
+import 'package:adv_basics/data/questions.dart';
 
 class ResultsScreen extends StatelessWidget {
-  ResultsScreen({super.key, required this.ChoosenAnswers});
+  const ResultsScreen({super.key, required this.choosenAnswers});
 
-  final List<String> ChoosenAnswers;
+  final List<String> choosenAnswers;
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
-    for ( var i = 0; i < ChoosenAnswers.length; i++){
-
+    for (var i = 0; i < choosenAnswers.length; i++) {
       //creating a map value
       summary.add({
-        'question_index':i,
-        'question':questions[i].text,
-        'correct_answer':questions[i].answers[0],
-        'user_answer':ChoosenAnswers[i]
-
-
-
+        'question_index': i,
+        'question': questions[i].text,
+        'correct_answer': questions[i].answers[0],
+        'user_answer': choosenAnswers[i]
       });
-
-
     }
-
 
     return summary;
   }
@@ -40,7 +34,7 @@ class ResultsScreen extends StatelessWidget {
             children: [
               const Text("You answered x out of y questions correctly"),
               const SizedBox(height: 30),
-              const Text('List of answers and Questions...'),
+              QuestionsSummary(getSummaryData()),
               TextButton(onPressed: () {}, child: const Text('Restart Quiz'))
             ],
           ),

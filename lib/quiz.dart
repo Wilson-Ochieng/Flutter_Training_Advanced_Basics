@@ -49,7 +49,7 @@ class _QuizeState extends State<Quiz> {
     }
 
     if(activeScreen == 'results-screen'){
-      screenWidget = ResultsScreen( ChoosenAnswers: selectedAnswers,);
+      screenWidget = ResultsScreen( choosenAnswers: selectedAnswers,);
 
 
 
